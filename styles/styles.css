@@ -1,0 +1,662 @@
+/* ==========================================================================
+   1. VARIABLES DE COLOR Y CONFIGURACIÓN GENERAL
+   ========================================================================== */
+:root {
+    --primary-blue: #0f3460;       /* Azul oscuro de los encabezados */
+    --teal-brand: #1a8f96;         /* Turquesa/Verde azulado principal */
+    --teal-hover: #136f75;         /* Turquesa hover */
+    --bg-light-gray: #e9ecef;      /* Fondos grisáceos de contenedores */
+    --bg-section-light: #f8f9fa;   /* Fondo claro para alternar secciones */
+    --text-dark: #212529;          /* Color de texto principal */
+    --text-muted: #6c757d;         /* Color de texto secundario/atenuado */
+    --border-color: #dee2e6;       /* Gris para bordes sutiles */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento automático fluido nativo */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+/* Contenedor global para limitar el ancho y centrar contenidos */
+.contenedor-seccion {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* ==========================================================================
+   2. CABECERA / MENÚ DE NAVEGACIÓN
+   ========================================================================== */
+#cabecera {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 52, 96, 0.95); /* Azul fijo mientras no useis JS */
+    padding: 15px 0;
+    z-index: 1050;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contenedor-header {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cabecera .logo {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.menu-navegacion {
+    display: flex;
+    gap: 25px;
+}
+
+.menu-navegacion a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.menu-navegacion a:hover {
+    color: var(--teal-brand);
+}
+
+/* Espaciado superior en main para que el menú fixed no tape el contenido */
+main {
+    margin-top: 70px;
+}
+
+/* ==========================================================================
+   3. SECCIÓN 1: INICIO (HERO BANNER Y PRESENTACIÓN)
+   ========================================================================== */
+.hero-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200') no-repeat center center;
+    background-size: cover;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-contenido {
+    max-width: 800px;
+    color: #ffffff;
+}
+
+.subtitulo-hero {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-contenido h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.descripcion-hero {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: var(--teal-brand);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.btn-principal:hover {
+    background-color: var(--teal-hover);
+    transform: translateY(-2px);
+}
+
+/* Bloque Presentación del Proyecto */
+.presentacion-proyecto {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.presentacion-proyecto h2 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.texto-destacado {
+    font-size: 1.15rem;
+    color: #495057;
+    margin-bottom: 15px;
+}
+
+.texto-secundario {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Botones Rápidos */
+.navegacion-rapida {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.navegacion-rapida h3 {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.contenedor-botones-atajo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-atajo {
+    background-color: var(--teal-brand);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-atajo:hover {
+    background-color: var(--teal-hover);
+    transform: translateY(-2px);
+}
+
+.btn-atajo-oscuro {
+    background-color: #212529;
+}
+
+.btn-atajo-oscuro:hover {
+    background-color: #000000;
+}
+
+/* ==========================================================================
+   4. SECCIÓN 2: NOSOTROS
+   ========================================================================== */
+#nosotros {
+    background-color: var(--bg-section-light);
+}
+
+.titulo-bloque {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.bloque-contenido {
+    margin-bottom: 25px;
+}
+
+.subtitulo-bloque {
+    font-size: 1rem;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.caja-gris {
+    background-color: var(--bg-light-gray);
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.lista-metas {
+    list-style: none;
+}
+
+.lista-metas li {
+    margin-bottom: 12px;
+}
+
+.lista-metas li:last-child {
+    margin-bottom: 0;
+}
+
+/* Rejilla del Equipo con Flexbox responsive */
+.encabezado-equipo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.etiqueta-docente {
+    background-color: #e2eafc;
+    color: var(--primary-blue);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.cuadris-equipo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tarjeta-miembro {
+    background-color: #ffffff;
+    flex: 1 1 calc(25% - 20px); /* 4 columnas en pantallas grandes */
+    min-width: 200px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #e2eafc;
+    color: #0056b3;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+    border: 3px solid #0056b3;
+}
+
+.tarjeta-miembro h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.tarjeta-miembro small {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   5. SECCIÓN 3: SERVICIOS
+   ========================================================================== */
+#servicios {
+    background: linear-gradient(135deg, #5c8d93, #43656a);
+}
+
+.titulo-servicios {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+}
+
+.cuadris-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjeta-servicio {
+    background-color: rgba(255, 255, 255, 0.95);
+    flex: 1 1 calc(33.333% - 20px); /* 3 columnas */
+    min-width: 280px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-servicio h3 {
+    font-size: 1.15rem;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.imagen-servicio {
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.lista-detalles-servicio {
+    list-style: none;
+}
+
+.lista-detalles-servicio li {
+    margin-bottom: 15px;
+}
+
+.lista-detalles-servicio p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Columna especial de filas */
+.lista-filas-servicio {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.fila-servicio {
+    display: flex;
+    gap: 15px;
+    align-items: start;
+}
+
+.icono-servicio {
+    font-size: 1.2rem;
+    background-color: #f0f1f2;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.fila-servicio span {
+    font-size: 0.85rem;
+    color: #495057;
+}
+
+/* ==========================================================================
+   6. SECCIÓN 4: PROYECTOS
+   ========================================================================== */
+#proyectos {
+    background-color: var(--bg-section-light);
+}
+
+.titulo-proyectos {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    border-bottom: 3px solid var(--primary-blue);
+    padding-bottom: 8px;
+    margin-bottom: 30px;
+}
+
+.bloque-proyectos-grupo {
+    margin-bottom: 40px;
+}
+
+.bloque-proyectos-grupo h3 {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.cuadris-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjeta-proyecto {
+    background-color: #ffffff;
+    flex: 1 1 calc(25% - 20px); /* 4 columnas */
+    min-width: 220px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.foto-proyecto {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.tarjeta-proyecto p {
+    background-color: #bde0fe;
+    color: var(--primary-blue);
+    padding: 12px 8px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: auto; /* Empuja el texto al fondo si las alturas varían */
+}
+
+/* Cuadrícula CSS Grid Nativa para Tecnologías */
+.bloque-tecnologias h3 {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.tabla-tecnologias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    background-color: var(--border-color); /* Truco para simular bordes de tabla */
+    border: 1px solid var(--border-color);
+    background-color: #ffffff;
+}
+
+.celda-tech {
+    background-color: #ffffff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icono-tech {
+    font-size: 1.5rem;
+}
+
+.info-tech strong {
+    display: block;
+    font-size: 0.9rem;
+}
+
+.info-tech small {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   7. SECCIÓN 5: CONTACTO
+   ========================================================================== */
+.columnas-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.columna-formulario {
+    flex: 1 1 calc(50% - 20px);
+    min-width: 300px;
+}
+
+.columna-formulario h3, .columna-info-contacto h3 {
+    font-size: 1rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.formulario-limpio {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.grupo-campo label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #495057;
+}
+
+.grupo-campo input, .grupo-campo textarea {
+    border: 1px solid var(--primary-blue);
+    border-radius: 8px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.campos-dos-columnas {
+    display: flex;
+    gap: 15px;
+}
+
+.campos-dos-columnas .grupo-campo {
+    flex: 1;
+}
+
+.grupo-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.grupo-checkbox label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.btn-enviar {
+    background-color: #0d6efd;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #0b5ed7;
+}
+
+/* Columna Derecha */
+.columna-info-contacto {
+    flex: 1 1 calc(50% - 20px);
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lista-redes {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lista-redes li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: var(--teal-brand);
+    text-decoration: underline;
+}
+
+.tarjeta-ubicacion {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mini-mapa {
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.pin-mapa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+}
+
+.detalles-direccion ul {
+    list-style: none;
+}
+
+.detalles-direccion li {
+    font-size: 0.85rem;
+    color: #495057;
+}
+
+.detalles-direccion .enfasis {
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.detalles-direccion .atenuado {
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.detalles-direccion .fecha-publicacion {
+    font-size: 0.7rem;
+    color: rgba(0,0,0,0.4);
+    margin-top: 10px;
+}
