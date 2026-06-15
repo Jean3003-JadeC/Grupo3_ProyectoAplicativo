@@ -93,7 +93,7 @@ main {
    ========================================================================== */
 .hero-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
-                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200') no-repeat center center;
+                url('../img/hero.png') no-repeat center center;
     background-size: cover;
     min-height: 450px;
     display: flex;
