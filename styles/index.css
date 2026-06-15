@@ -16,21 +16,23 @@ body {
     overflow-x: hidden;
 }
 
-/* Reducción de tamaño extra para textos muy pequeños (Tecnologías) */
 .xx-small {
     font-size: 0.75rem;
 }
 
 /* ==========================================================================
-   2. SECCIÓN 1: INICIO (BANNER PRINCIPAL Y BOTONES)
+   2. SECCIÓN 1: INICIO (BANNER PRINCIPAL Y BOTONES CON FLEXBOX)
    ========================================================================== */
 .banner-principal {
-    /* Fondo con imagen de alta fidelidad superpuesta con un gradiente oscuro para legibilidad */
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
                 url('../assets/banner-tech.jpg') no-repeat center center;
     background-size: cover;
     min-height: 400px;
+    
+    /* Flexbox: Centrado absoluto del contenido del Hero Banner */
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     color: #ffffff;
 }
@@ -41,7 +43,15 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Estilos personalizados para emular los botones redondeados de alta fidelidad */
+/* Contenedor de botones rápidos con Flexbox */
+.navegacion-rapida .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Control de separación uniforme mediante Flexbox gap */
+}
+
 #inicio .btn-primary, 
 #inicio .btn-secondary, 
 #inicio .btn-dark {
@@ -66,58 +76,61 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Icono de diamante en la presentación */
 .presentacion-proyecto h2::before {
     content: "💎 ";
     font-size: 1.2rem;
 }
 
 /* ==========================================================================
-   3. SECCIÓN 2: NOSOTROS (ENCABEZADOS Y COMPONENTES DE EQUIPO)
+   3. SECCIÓN 2: NOSOTROS (COMPONENTE DE EQUIPO CON FLEXBOX)
    ========================================================================== */
 #nosotros h2, #contacto h2 {
     background-color: var(--primary-blue);
     color: #ffffff;
     padding: 12px 20px;
     font-weight: 600;
-    margin-left: -12px;
-    margin-right: -12px;
 }
 
-@media (min-width: 576px) {
-    #nosotros h2, #contacto h2 {
-        margin-left: 0;
-        margin-right: 0;
-        border-radius: 4px;
-    }
-}
-
-/* Contenedores de texto redondeados en Nosotros */
 #nosotros .bg-white.border {
     background-color: var(--bg-light-gray) !important;
     border: none !important;
     border-radius: 12px !important;
 }
 
-/* Elementos del equipo */
+/* Flexbox: Alineación vertical y distribución de los avatares */
+#nosotros .equipo-trabajo .col-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 #nosotros .rounded-circle {
-    border: 3px solid #0056b3 !important; /* Aro azul nítido alrededor de las fotos */
+    border: 3px solid #0056b3 !important;
     width: 110px !important;
     height: 110px !important;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Flexbox para centrar las iniciales (JP, DR...) si no hay foto cargada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #0056b3;
 }
 
 #nosotros h4 {
     color: var(--text-dark);
     font-weight: 700;
+    margin-top: 0.5rem;
 }
 
 /* ==========================================================================
-   4. SECCIÓN 3: SERVICIOS (TARJETAS E ICONOS)
+   4. SECCIÓN 3: SERVICIOS (TARJETAS HOMOGÉNEAS CON FLEXBOX)
    ========================================================================== */
 #servicios {
-    background: linear-gradient(135deg, #5c8d93, #43656a); /* Fondo degradado azul-verdoso metálico */
+    background: linear-gradient(135deg, #5c8d93, #43656a);
 }
 
 #servicios h2 {
@@ -126,8 +139,21 @@ body {
     text-align: center;
 }
 
+/* Flexbox: Obliga a todas las tarjetas de servicios a tener la misma altura exacta */
+#servicios .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#servicios .col-12 {
+    display: flex;
+}
+
 #servicios .bg-light {
-    background-color: rgba(255, 255, 255, 0.95) !important; /* Tarjetas blancas contrastantes */
+    display: flex;
+    flex-direction: column; /* Organiza el título, la imagen y la lista verticalmente */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95) !important;
     border: none !important;
     border-radius: 16px !important;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -138,21 +164,23 @@ body {
     transform: translateY(-5px);
 }
 
-#servicios h3 {
-    color: var(--primary-blue);
-    font-weight: 700;
+/* Flexbox interno para las filas con iconos pequeños de la columna 3.3 */
+#servicios .d-flex.align-items-center {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-/* Ajustes para las imágenes internas de las tarjetas de servicios */
 #servicios .bg-secondary-subtle {
-    background-size: cover !important;
-    background-position: center !important;
     border-radius: 8px;
     border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ==========================================================================
-   5. SECCIÓN 4: PROYECTOS (TARJETAS ASIMÉTRICAS CON MARGEN INFERIOR AZUL)
+   5. SECCIÓN 4: PROYECTOS (ESTRUCTURA ASIMÉTRICA FLEXBOX)
    ========================================================================== */
 #proyectos h2 {
     color: var(--primary-blue);
@@ -161,40 +189,48 @@ body {
     padding-bottom: 8px;
 }
 
+/* Flexbox: Mantiene alineadas las tarjetas de proyectos */
+#proyectos .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#proyectos .col-6 {
+    display: flex;
+}
+
 #proyectos .bg-white.border {
+    display: flex;
+    flex-direction: column; /* Permite empujar la barra azul al fondo */
+    width: 100%;
     border: none !important;
     border-radius: 16px !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    background-color: #ffffff !important;
 }
 
-/* Bloque inferior azul sutil en las tarjetas de proyectos */
-#proyectos .proyectos-academicos .h-100,
-#proyectos .casos-demostrativos .h-100 {
-    display: flex;
-    flex-direction: column;
-}
-
+/* Flexbox: Empuja el texto con fondo azul claro hacia la base de la tarjeta */
 #proyectos .proyectos-academicos p,
 #proyectos .casos-demostrativos p {
-    background-color: #bde0fe; /* Fondo celeste suave para el texto */
+    background-color: #bde0fe;
     color: var(--primary-blue);
     padding: 12px 8px;
-    margin: 0 -8px -8px -8px; /* Ajuste para expandir el fondo al borde inferior de la tarjeta */
+    margin: auto -8px -8px -8px; /* El 'margin-top: auto' hace la magia de Flexbox */
+    width: calc(100% + 16px);
+    text-align: center;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
-    margin-top: auto;
 }
 
-/* Cuadrícula de Tecnologías Utilizadas */
-#proyectos .tecnologias-utilizadas .bg-white {
-    border: 1px solid var(--border-color) !important;
-    border-radius: 0px !important; /* Estilo clásico de rejilla/tabla */
+/* Cuadrícula de Tecnologías en modo Flexbox para alineación de celdas */
+#proyectos .tecnologias-utilizadas .col-12 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 /* ==========================================================================
-   6. SECCIÓN 5: CONTACTO (FORMULARIO Y REDES)
+   6. SECCIÓN 5: CONTACTO (DISTRIBUCIÓN EQUILIBRADA CON FLEXBOX)
    ========================================================================== */
 #contacto .form-control {
     border: 1px solid var(--primary-blue);
@@ -202,12 +238,20 @@ body {
     padding: 10px;
 }
 
-#contacto .form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(15, 52, 96, 0.25);
-    border-color: var(--primary-blue);
+/* Flexbox: Distribuye de manera homogénea las redes sociales y el mapa a la derecha */
+#contacto .col-md-6.d-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Deja las redes arriba y el mapa abajo */
 }
 
-/* Botón enviar azul brillante */
+/* Flexbox interno para alinear la miniatura del mapa con su texto descriptivo */
+#contacto .row.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 #contacto form button[type="submit"] {
     background-color: #0d6efd !important;
     color: #ffffff !important;
@@ -222,11 +266,13 @@ body {
     background-color: #0b5ed7 !important;
 }
 
-/* Enlaces de Redes Sociales */
+/* Flexbox para los items de redes sociales de alta fidelidad con iconos */
 #contacto ul.list-unstyled li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     font-size: 1.1rem;
     font-weight: 500;
     text-decoration: underline;
     color: var(--teal-brand) !important;
-    cursor: pointer;
 }
