@@ -1,1 +1,232 @@
-"Holas"
+/* ==========================================================================
+   1. VARIABLES DE COLOR Y CONFIGURACIÓN GENERAL
+   ========================================================================== */
+:root {
+    --primary-blue: #0f3460;       /* Azul oscuro de los encabezados de sección */
+    --teal-brand: #1a8f96;         /* Turquesa/Verde azulado de los botones principales */
+    --teal-hover: #136f75;         /* Tono turquesa más oscuro para estados hover */
+    --bg-light-gray: #e9ecef;      /* Fondos grisáceos de los contenedores */
+    --text-dark: #212529;          /* Color de texto principal */
+    --border-color: #dee2e6;       /* Gris para bordes sutiles */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* Reducción de tamaño extra para textos muy pequeños (Tecnologías) */
+.xx-small {
+    font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   2. SECCIÓN 1: INICIO (BANNER PRINCIPAL Y BOTONES)
+   ========================================================================== */
+.banner-principal {
+    /* Fondo con imagen de alta fidelidad superpuesta con un gradiente oscuro para legibilidad */
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                url('../assets/banner-tech.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.banner-principal h1 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Estilos personalizados para emular los botones redondeados de alta fidelidad */
+#inicio .btn-primary, 
+#inicio .btn-secondary, 
+#inicio .btn-dark {
+    background-color: var(--teal-brand) !important;
+    border-color: var(--teal-brand) !important;
+    color: #ffffff !important;
+    border-radius: 50px;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+#inicio .btn-primary:hover, 
+#inicio .btn-secondary:hover, 
+#inicio .btn-dark:hover {
+    background-color: var(--teal-hover) !important;
+    border-color: var(--teal-hover) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Icono de diamante en la presentación */
+.presentacion-proyecto h2::before {
+    content: "💎 ";
+    font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   3. SECCIÓN 2: NOSOTROS (ENCABEZADOS Y COMPONENTES DE EQUIPO)
+   ========================================================================== */
+#nosotros h2, #contacto h2 {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    padding: 12px 20px;
+    font-weight: 600;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+@media (min-width: 576px) {
+    #nosotros h2, #contacto h2 {
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 4px;
+    }
+}
+
+/* Contenedores de texto redondeados en Nosotros */
+#nosotros .bg-white.border {
+    background-color: var(--bg-light-gray) !important;
+    border: none !important;
+    border-radius: 12px !important;
+}
+
+/* Elementos del equipo */
+#nosotros .rounded-circle {
+    border: 3px solid #0056b3 !important; /* Aro azul nítido alrededor de las fotos */
+    width: 110px !important;
+    height: 110px !important;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#nosotros h4 {
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   4. SECCIÓN 3: SERVICIOS (TARJETAS E ICONOS)
+   ========================================================================== */
+#servicios {
+    background: linear-gradient(135deg, #5c8d93, #43656a); /* Fondo degradado azul-verdoso metálico */
+}
+
+#servicios h2 {
+    color: #ffffff !important;
+    font-weight: 700;
+    text-align: center;
+}
+
+#servicios .bg-light {
+    background-color: rgba(255, 255, 255, 0.95) !important; /* Tarjetas blancas contrastantes */
+    border: none !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#servicios .bg-light:hover {
+    transform: translateY(-5px);
+}
+
+#servicios h3 {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+/* Ajustes para las imágenes internas de las tarjetas de servicios */
+#servicios .bg-secondary-subtle {
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 8px;
+    border: none !important;
+}
+
+/* ==========================================================================
+   5. SECCIÓN 4: PROYECTOS (TARJETAS ASIMÉTRICAS CON MARGEN INFERIOR AZUL)
+   ========================================================================== */
+#proyectos h2 {
+    color: var(--primary-blue);
+    font-weight: 700;
+    border-bottom: 3px solid var(--primary-blue);
+    padding-bottom: 8px;
+}
+
+#proyectos .bg-white.border {
+    border: none !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    background-color: #ffffff !important;
+}
+
+/* Bloque inferior azul sutil en las tarjetas de proyectos */
+#proyectos .proyectos-academicos .h-100,
+#proyectos .casos-demostrativos .h-100 {
+    display: flex;
+    flex-direction: column;
+}
+
+#proyectos .proyectos-academicos p,
+#proyectos .casos-demostrativos p {
+    background-color: #bde0fe; /* Fondo celeste suave para el texto */
+    color: var(--primary-blue);
+    padding: 12px 8px;
+    margin: 0 -8px -8px -8px; /* Ajuste para expandir el fondo al borde inferior de la tarjeta */
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    margin-top: auto;
+}
+
+/* Cuadrícula de Tecnologías Utilizadas */
+#proyectos .tecnologias-utilizadas .bg-white {
+    border: 1px solid var(--border-color) !important;
+    border-radius: 0px !important; /* Estilo clásico de rejilla/tabla */
+}
+
+/* ==========================================================================
+   6. SECCIÓN 5: CONTACTO (FORMULARIO Y REDES)
+   ========================================================================== */
+#contacto .form-control {
+    border: 1px solid var(--primary-blue);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#contacto .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(15, 52, 96, 0.25);
+    border-color: var(--primary-blue);
+}
+
+/* Botón enviar azul brillante */
+#contacto form button[type="submit"] {
+    background-color: #0d6efd !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px;
+    padding: 10px 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(13, 110, 253, 0.2);
+}
+
+#contacto form button[type="submit"]:hover {
+    background-color: #0b5ed7 !important;
+}
+
+/* Enlaces de Redes Sociales */
+#contacto ul.list-unstyled li {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: underline;
+    color: var(--teal-brand) !important;
+    cursor: pointer;
+}
