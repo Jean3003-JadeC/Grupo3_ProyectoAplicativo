@@ -1,3 +1,27 @@
+/* Cabecera dinámica base (Estado inicial transparente) */
+#cabecera {
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    z-index: 1050;
+}
+
+#cabecera .nav-link {
+    transition: color 0.2s ease;
+}
+
+#cabecera .nav-link:hover {
+    color: var(--teal-brand) !important;
+}
+
+/* Estado activo cuando se detecta el scroll (Se activa por JS) */
+#cabecera.scroll-activo {
+    background-color: rgba(15, 52, 96, 0.95) !important; /* Azul marino con opacidad */
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px); /* Efecto esmerilado moderno */
+}
+
 /* ==========================================================================
    1. VARIABLES DE COLOR Y CONFIGURACIÓN GENERAL
    ========================================================================== */
