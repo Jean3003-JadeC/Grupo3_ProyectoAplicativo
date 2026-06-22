@@ -3,171 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plataforma Web de Consultoría en Data & IA - Cibertec</title>
+    <title>Plataforma Web de Consultoria en Data & IA | Cibertec</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
-    <header id="cabecera">
-        <div class="contenedor-header">
-            <a class="logo" href="#inicio">Consultoría Data & IA</a>
-            <nav class="menu-navegacion">
-                <a href="#inicio">Inicio</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
+    <nav class="navbar navbar-expand navbar-dark fixed-top" id="navbar-principal">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#inicio">
+                <i class="bi bi-diagram-3 me-2"></i>Consultoria Data & IA
+            </a>
+            <ul class="navbar-nav ms-auto flex-row flex-wrap">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
     <main>
-        <section id="inicio">
-            <div class="hero-banner">
-                <div class="hero-contenido">
-                    <span class="subtitulo-hero">Instituto de Educación Superior Privado Cibertec</span>
-                    <h1>SOLUCIONES TECNOLÓGICAS DE VANGUARDIA</h1>
-                    <p class="descripcion-hero">Plataforma Web de Consultoría en Data & Inteligencia Artificial</p>
-                    <a href="#proyectos" class="btn-principal">Ver Proyectos</a>
-                </div>
+        <section id="inicio" class="hero-section d-flex align-items-center">
+            <div class="container text-center text-white">
+                <span class="hero-subtitle d-block text-uppercase small ls-2 mb-3">Instituto de Educacion Superior Privado Cibertec</span>
+                <h1 class="display-4 fw-bold mb-3 text-shadow text-white">SOLUCIONES TECNOLOGICAS DE VANGUARDIA</h1>
+                <p class="lead text-white-50 mb-4">Plataforma Web de Consultoria en Data & Inteligencia Artificial</p>
+                <a href="#proyectos" class="btn btn-accent btn-lg rounded-pill px-4">Ver Proyectos</a>
             </div>
+        </section>
 
-            <div class="presentacion-proyecto">
-                <h2>💎 1.2 Presentación del proyecto</h2>
-                <p class="texto-destacado">
-                    Empoderamos a las empresas mediante arquitecturas de software avanzadas y análisis de datos en profundidad. Nuestro enfoque colaborativo transforma desafíos complejos en oportunidades de mercado, garantizando soluciones escalables y eficientes para un crecimiento sostenible. Desde la ideación hasta el despliegue, somos su aliado estratégico.
-                </p>
-                <p class="texto-secundario">
-                    La propuesta responde a la rápida expansión de los servicios de Big Data e Inteligencia Artificial a nivel global. Hoy en día, estas tecnologías ya no son un lujo, sino una necesidad crítica para las organizaciones que desean mantener su competitividad y fundamentar sus decisiones estratégicas en datos reales.
-                </p>
-            </div>
-
-            <div class="navegacion-rapida">
-                <h3>1.3 Botón de navegación rápida</h3>
-                <div class="contenedor-botones-atajo">
-                    <a href="#servicios" class="btn-atajo">Nuestras Tecnologías</a>
-                    <a href="#proyectos" class="btn-atajo">Casos de Éxito</a>
-                    <a href="#nosotros" class="btn-atajo">Sobre Nosotros</a> 
-                    <a href="#contacto" class="btn-atajo btn-atajo-oscuro">Contáctanos</a>
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2 class="section-number mb-4"><i class="bi bi-gem me-2"></i>1.2 Presentacion del proyecto</h2>
+                        <p class="lead text-secondary">
+                            Empoderamos a las empresas mediante arquitecturas de software avanzadas y analisis de datos en profundidad. Nuestro enfoque colaborativo transforma desafios complejos en oportunidades de mercado, garantizando soluciones escalables y eficientes para un crecimiento sostenible. Desde la ideacion hasta el despliegue, somos su aliado estrategico.
+                        </p>
+                        <p class="text-muted">
+                            La propuesta responde a la rapida expansion de los servicios de Big Data e Inteligencia Artificial a nivel global. Hoy en dia, estas tecnologias ya no son un lujo, sino una necesidad critica para las organizaciones que desean mantener su competitividad y fundamentar sus decisiones estrategicas en datos reales.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="nosotros">
-            <div class="contenedor-seccion">
-                <h2 class="titulo-bloque">2. Nosotros</h2>
+        <section class="pb-5">
+            <div class="container text-center">
+                <h3 class="text-muted small text-uppercase mb-4">1.3 Botones de navegacion rapida</h3>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="#servicios" class="btn btn-accent rounded-pill px-4">Nuestras Tecnologias</a>
+                    <a href="#proyectos" class="btn btn-accent rounded-pill px-4">Casos de Exito</a>
+                    <a href="#nosotros" class="btn btn-accent rounded-pill px-4">Sobre Nosotros</a>
+                    <a href="#contacto" class="btn btn-dark rounded-pill px-4">Contactanos</a>
+                </div>
+            </div>
+        </section>
 
-                <div class="bloque-contenido">
-                    <h3 class="subtitulo-bloque">• 2.1 Quiénes somos</h3>
-                    <div class="caja-gris">
-                        <p>
-                            Somos una empresa de tecnología innovadora dedicada a resolver problemas complejos con soluciones creativas. Fundada por un equipo de visionarios con décadas de experiencia combinada, nos esforzamos por redefinir los estándares de la industria y crear un impacto positivo en la sociedad, promoviendo iniciativas orientadas al impacto de valor, el trabajo coordinado, la competencia y la innovación digital.
+        <section id="nosotros" class="section-alt py-5">
+            <div class="container">
+                <h2 class="section-title-bar mb-4">2. Nosotros</h2>
+
+                <div class="mb-4">
+                    <h3 class="subsection-title"><i class="bi bi-dot"></i>2.1 Quienes somos</h3>
+                    <div class="card card-body bg-light border-0 rounded-4">
+                        <p class="mb-0">
+                            Somos una empresa de tecnologia innovadora dedicada a resolver problemas complejos con soluciones creativas. Fundada por un equipo de visionarios con decadas de experiencia combinada, nos esforzamos por redefinir los estandares de la industria y crear un impacto positivo en la sociedad, promoviendo iniciativas orientadas al impacto de valor, el trabajo coordinado, la competencia y la innovacion digital.
                         </p>
                     </div>
                 </div>
 
-                <div class="bloque-contenido">
-                    <h3 class="subtitulo-bloque">• 2.2 Misión, Visión y Objetivos</h3>
-                    <div class="caja-gris">
-                        <ul class="lista-metas">
-                            <li><strong>• Misión:</strong> Empoderar a las empresas para que alcancen su máximo potencial mediante soluciones tecnológicas avanzadas y personalizadas en analítica y automatización.</li>
-                            <li><strong>• Visión:</strong> Ser el líder global reconocido por la excelencia en innovación, sostenibilidad y servicio al cliente, guiando la transición hacia la era del dato real.</li>
-                            <li><strong>• Objetivos SMART:</strong> Desarrollar una interfaz Single Page responsive mediante HTML5, CSS3 y JavaScript con navegación interactiva y desplazamiento automático fluido aplicados al entorno empresarial.</li>
+                <div class="mb-4">
+                    <h3 class="subsection-title"><i class="bi bi-dot"></i>2.2 Mision, Vision y Objetivos</h3>
+                    <div class="card card-body bg-light border-0 rounded-4">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2"><strong><i class="bi bi-bullseye text-accent me-1"></i>Mision:</strong> Empoderar a las empresas para que alcancen su maximo potencial mediante soluciones tecnologicas avanzadas y personalizadas en analitica y automatizacion.</li>
+                            <li class="mb-2"><strong><i class="bi bi-eye text-accent me-1"></i>Vision:</strong> Ser el lider global reconocido por la excelencia en innovacion, sostenibilidad y servicio al cliente, guiando la transicion hacia la era del dato real.</li>
+                            <li><strong><i class="bi bi-graph-up-arrow text-accent me-1"></i>Objetivos SMART:</strong> Desarrollar una interfaz Single Page responsive mediante HTML5, CSS3 y Bootstrap con navegacion interactiva y desplazamiento automatico fluido aplicados al entorno empresarial.</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="seccion-equipo">
-                    <div class="encabezado-equipo">
-                        <h3 class="subtitulo-bloque">• 2.3 Equipo de trabajo (Sección 5367)</h3>
-                        <span class="etiqueta-docente">Docente: Jose Luis Pintado Vasquez</span>
+                <div class="mt-5">
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-4">
+                        <h3 class="subsection-title mb-0"><i class="bi bi-dot"></i>2.3 Equipo de trabajo (Seccion 5367)</h3>
+                        <span class="badge bg-accent-subtle text-accent rounded-pill px-3 py-2"><i class="bi bi-person-badge me-1"></i>Docente: Jose Luis Pintado Vasquez</span>
                     </div>
-                    
-                    <div class="cuadris-equipo">
-                        <div class="tarjeta-miembro">
-                            <div class="avatar">JP</div>
-                            <h4>Abarca Ccama Jean Paul</h4>
-                            <small>Ciencia de Datos</small>
-                        </div>
-                        <div class="tarjeta-miembro">
-                            <div class="avatar">DR</div>
-                            <h4>Dick Antony Ruiz Carmona</h4>
-                            <small>Ingeniero de IA</small>
-                        </div>
-                        <div class="tarjeta-miembro">
-                            <div class="avatar">KB</div>
-                            <h4>Kevin Hector Bazalar Rivas</h4>
-                            <small>Arquitecto Cloud</small>
-                        </div>
-                        <div class="tarjeta-miembro">
-                            <div class="avatar">JC</div>
-                            <h4>Jesús Pedro Cotrina Velasquez</h4>
-                            <small>Frontend Specialist</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="servicios">
-            <div class="contenedor-seccion">
-                <h2 class="titulo-servicios">3. Servicios</h2>
-                
-                <div class="cuadris-servicios">
-                    <div class="tarjeta-servicio">
-                        <h3>3.1 Consultoría en Data</h3>
-                        <div class="imagen-servicio" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=500');"></div>
-                        <ul class="lista-detalles-servicio">
-                            <li>
-                                <strong>📈 Feature de data.</strong>
-                                <p>Analítica avanzada, estructuración, procesamiento y visualización de métricas críticas en tiempo real.</p>
-                            </li>
-                            <li>
-                                <strong>⚗️ Features de moostas.</strong>
-                                <p>Filtros inteligentes, extracción automatizada y minería profunda de grandes volúmenes de información.</p>
-                            </li>
-                            <li>
-                                <strong>🌐 Features de recitillos.</strong>
-                                <p>Arquitecturas e integraciones en la nube (AWS, Azure, Google Cloud) escalables y robustas.</p>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="tarjeta-servicio">
-                        <h3>3.2 Consultoría en IA</h3>
-                        <div class="imagen-servicio" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200');"></div>
-                        <ul class="lista-detalles-servicio">
-                            <li>
-                                <strong>💡 Concepts.</strong>
-                                <p>Modelos predictivos personalizados, Machine Learning profundo y algoritmos de redes neuronales aplicadas.</p>
-                            </li>
-                            <li>
-                                <strong>🌿 Process.</strong>
-                                <p>Automatización inteligente de flujos de trabajo de negocio y optimización algorítmica sostenible.</p>
-                            </li>
-                            <li>
-                                <strong>⚙️ Process.</strong>
-                                <p>Sistemas de recomendación en tiempo real y frameworks éticos y responsables orientados a la privacidad.</p>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="tarjeta-servicio">
-                        <h3>3.3 Desarrollo de soluciones digitales</h3>
-                        <div class="imagen-servicio" style="background-image: url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=500');"></div>
-                        
-                        <div class="lista-filas-servicio">
-                            <div class="fila-servicio">
-                                <div class="icono-servicio">💻</div>
-                                <span>Desarrollo de soluciones digitales basadas en arquitecturas SPA nativas de alta conversión.</span>
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card team-card border-0 h-100 text-center p-4">
+                                <div class="team-avatar mx-auto mb-3">JP</div>
+                                <h5 class="fw-bold mb-1">Abarca Ccama Jean Paul</h5>
+                                <small class="text-muted">Ciencia de Datos</small>
                             </div>
-                            <div class="fila-servicio">
-                                <div class="icono-servicio">📱</div>
-                                <span>Desarrollo de soluciones digitales interactivas adaptadas al 100% a smartphones y tablets.</span>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card team-card border-0 h-100 text-center p-4">
+                                <div class="team-avatar mx-auto mb-3">DR</div>
+                                <h5 class="fw-bold mb-1">Dick Antony Ruiz Carmona</h5>
+                                <small class="text-muted">Ingeniero de IA</small>
                             </div>
-                            <div class="fila-servicio">
-                                <div class="icono-servicio">📊</div>
-                                <span>Desarrollo en core data y despliegue estático optimizado bajo estándares de Entornos Web.</span>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card team-card border-0 h-100 text-center p-4">
+                                <div class="team-avatar mx-auto mb-3">KB</div>
+                                <h5 class="fw-bold mb-1">Kevin Hector Bazalar Rivas</h5>
+                                <small class="text-muted">Arquitecto Cloud</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card team-card border-0 h-100 text-center p-4">
+                                <div class="team-avatar mx-auto mb-3">JC</div>
+                                <h5 class="fw-bold mb-1">Jesus Pedro Cotrina Velasquez</h5>
+                                <small class="text-muted">Frontend Specialist</small>
                             </div>
                         </div>
                     </div>
@@ -175,188 +126,293 @@
             </div>
         </section>
 
-        <section id="proyectos">
-            <div class="contenedor-seccion">
-                <h2 class="titulo-proyectos">4. Proyectos</h2>
+        <section id="servicios" class="py-5 bg-gradient-primary">
+            <div class="container">
+                <h2 class="text-center text-white fw-bold mb-5">3. Servicios</h2>
+                <div class="row g-4">
 
-                <div class="bloque-proyectos-grupo">
-                    <h3>4.1 Proyectos académicos</h3>
-                    <div class="cuadris-proyectos">
-                        
-                        <div class="tarjeta-proyecto">
-                            <img src="./img/hero.png" alt="Caso de estudio - Banca" class="foto-proyecto-img">
-                            <p>Case study de académicos - Banca</p>
-                        </div>
-
-                        <div class="tarjeta-proyecto">
-                            <img src="./img/hero.png" alt="Caso de estudio - Retail" class="foto-proyecto-img">
-                            <p>Case study de académicos - Retail</p>
-                        </div>
-
-                        <div class="tarjeta-proyecto">
-                            <img src="./img/hero.png" alt="Caso de estudio - Salud" class="foto-proyecto-img">
-                            <p>Case study de académicos - Salud</p>
-                        </div>
-
-                        <div class="tarjeta-proyecto">
-                            <img src="./img/hero.png" alt="Caso de estudio - MIPYME" class="foto-proyecto-img">
-                            <p>Case study de académicos - MIPYME</p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="bloque-proyectos-grupo">
-                    <h3>4.2 Casos demostrativos</h3>
-                    <div class="cuadris-proyectos">
-                        
-                        <div class="tarjeta-proyecto">
-                            <img src="./img/hero.png" alt="Caso demostrativo - Inteligencia Artificial" class="foto-proyecto-img">
-                            <p>Case study de demostrativo IA</p>
-                        </div>
-
-                        <div class="tarjeta-proyecto">
-                            <img src="./img/hero.png" alt="Caso demostrativo - Data" class="foto-proyecto-img">
-                            <p>Case study de demostrativo Data</p>
-                        </div>
-
-                        <div class="tarjeta-proyecto">
-                            <img src="./img/hero.png" alt="Caso demostrativo - Web" class="foto-proyecto-img">
-                            <p>Case study de demostrativo Web</p>
-                        </div>
-
-                        <div class="tarjeta-proyecto">
-                            <img src="./img/hero.png" alt="Caso demostrativo - Cloud" class="foto-proyecto-img">
-                            <p>Case study de demostrativo Cloud</p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="bloque-tecnologias">
-                    <h3>4.3 Tecnologías y Entorno Operativo</h3>
-                    <div class="tabla-tecnologias">
-                        <div class="celda-tech">
-                            <span class="icono-tech">🌐</span>
-                            <div class="info-tech"><strong>Data platform</strong><small>AWS, Azure, Google Cloud</small></div>
-                        </div>
-                        <div class="celda-tech">
-                            <span class="icono-tech">🤖</span>
-                            <div class="info-tech"><strong>Dvorok</strong><small>Modelos Predictivos Avanzados</small></div>
-                        </div>
-                        <div class="celda-tech">
-                            <span class="icono-tech">📊</span>
-                            <div class="info-tech"><strong>AMS</strong><small>Visualización Real-Time</small></div>
-                        </div>
-                        <div class="celda-tech">
-                            <span class="icono-tech">🛠️</span>
-                            <div class="info-tech"><strong>Data platform</strong><small>HTML5, CSS3, JS Esencial</small></div>
-                        </div>
-                        <div class="celda-tech">
-                            <span class="icono-tech">🧠</span>
-                            <div class="info-tech"><strong>AI framework</strong><small>Sandbox Regulatorios</small></div>
-                        </div>
-                        <div class="celda-tech">
-                            <span class="icono-tech">📦</span>
-                            <div class="info-tech"><strong>Framework</strong><small>Animaciones Básicas</small></div>
-                        </div>
-                        <div class="celda-tech">
-                            <span class="icono-tech">🐍</span>
-                            <div class="info-tech"><strong>Pycook</strong><small>Python Ecosystem</small></div>
-                        </div>
-                        <div class="celda-tech">
-                            <span class="icono-tech">⚡</span>
-                            <div class="info-tech"><strong>Framework, AI</strong><small>APIs de Inferencia Rápida</small></div>
-                        </div>
-                        <div class="celda-tech">
-                            <span class="icono-tech">🌱</span>
-                            <div class="info-tech"><strong>AMC</strong><small>Arquitecturas de Bajo Consumo</small></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto">
-            <div class="contenedor-seccion">
-                <h2 class="titulo-bloque">5. Contacto</h2>
-                
-                <div class="columnas-contacto">
-                    <div class="columna-formulario">
-                        <h3>5.1 Formulario de contacto</h3>
-                        <form class="formulario-limpio">
-                            <div class="grupo-campo">
-                                <label>Nombre:</label>
-                                <input type="text" placeholder="Tu nombre completo" required>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card service-card border-0 h-100">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 fw-bold text-primary">3.1 Consultoria en Data</h3>
+                                <div class="service-img rounded-3 mb-3" style="background-image: url('img/servicio-data.jpg');"></div>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <div class="d-flex gap-2">
+                                            <i class="bi bi-graph-up-arrow text-accent mt-1"></i>
+                                            <div><strong>Feature de data.</strong><p class="small text-muted mb-0">Analitica avanzada, estructuraccion, procesamiento y visualizacion de metricas criticas en tiempo real.</p></div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="d-flex gap-2">
+                                            <i class="bi bi-funnel text-accent mt-1"></i>
+                                            <div><strong>Features de muestras.</strong><p class="small text-muted mb-0">Filtros inteligentes, extraccion automatizada y mineria profunda de grandes volumenes de informacion.</p></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex gap-2">
+                                            <i class="bi bi-globe2 text-accent mt-1"></i>
+                                            <div><strong>Features de recitillos.</strong><p class="small text-muted mb-0">Arquitecturas e integraciones en la nube (AWS, Azure, Google Cloud) escalables y robustas.</p></div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            
-                            <div class="campos-dos-columnas">
-                                <div class="grupo-campo">
-                                    <label>Etiqueta 1:</label>
-                                    <input type="text" placeholder="Texto referencial">
-                                </div>
-                                <div class="grupo-campo">
-                                    <label>Etiqueta 2:</label>
-                                    <input type="text" placeholder="Texto referencial">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card service-card border-0 h-100">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 fw-bold text-primary">3.2 Consultoria en IA</h3>
+                                <div class="service-img rounded-3 mb-3" style="background-image: url('img/servicio-ia.jpg');"></div>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <div class="d-flex gap-2">
+                                            <i class="bi bi-lightbulb text-accent mt-1"></i>
+                                            <div><strong>Concepts.</strong><p class="small text-muted mb-0">Modelos predictivos personalizados, Machine Learning profundo y algoritmos de redes neuronales aplicadas.</p></div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="d-flex gap-2">
+                                            <i class="bi bi-arrow-repeat text-accent mt-1"></i>
+                                            <div><strong>Process.</strong><p class="small text-muted mb-0">Automatizacion inteligente de flujos de trabajo de negocio y optimizacion algoritmica sostenible.</p></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex gap-2">
+                                            <i class="bi bi-gear text-accent mt-1"></i>
+                                            <div><strong>Process.</strong><p class="small text-muted mb-0">Sistemas de recomendacion en tiempo real y frameworks eticos y responsables orientados a la privacidad.</p></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card service-card border-0 h-100">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 fw-bold text-primary">3.3 Desarrollo de soluciones digitales</h3>
+                                <div class="service-img rounded-3 mb-3" style="background-image: url('img/servicio-digital.jpg');"></div>
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="d-flex gap-3 align-items-start">
+                                        <span class="icon-box flex-shrink-0"><i class="bi bi-laptop"></i></span>
+                                        <span class="small">Desarrollo de soluciones digitales basadas en arquitecturas SPA nativas de alta conversion.</span>
+                                    </div>
+                                    <div class="d-flex gap-3 align-items-start">
+                                        <span class="icon-box flex-shrink-0"><i class="bi bi-phone"></i></span>
+                                        <span class="small">Desarrollo de soluciones digitales interactivas adaptadas al 100% a smartphones y tablets.</span>
+                                    </div>
+                                    <div class="d-flex gap-3 align-items-start">
+                                        <span class="icon-box flex-shrink-0"><i class="bi bi-bar-chart"></i></span>
+                                        <span class="small">Desarrollo en core data y despliegue estatico optimizado bajo estandares de Entornos Web.</span>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="grupo-campo">
-                                <label>Opciones de envío:</label>
-                                <input type="text" placeholder="Texto referencial">
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="py-5 section-alt">
+            <div class="container">
+                <h2 class="section-title-underline mb-4">4. Proyectos</h2>
+
+                <div class="mb-5">
+                    <h3 class="subsection-title text-muted mb-3">4.1 Proyectos academicos</h3>
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card project-card border-0 h-100">
+                                <img src="img/proyecto-banca.jpg" alt="Caso de estudio Banca" class="card-img-top project-img">
+                                <div class="card-footer text-center py-3 px-2 bg-accent-subtle border-0"><span class="fw-semibold text-primary small">Case study de academicos - Banca</span></div>
                             </div>
-
-                            <div class="grupo-checkbox">
-                                <input type="checkbox" id="checkInspect" checked>
-                                <label for="checkInspect">Acepto los términos establecidos</label>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card project-card border-0 h-100">
+                                <img src="img/proyecto-retail.jpg" alt="Caso de estudio Retail" class="card-img-top project-img">
+                                <div class="card-footer text-center py-3 px-2 bg-accent-subtle border-0"><span class="fw-semibold text-primary small">Case study de academicos - Retail</span></div>
                             </div>
-
-                            <div class="grupo-campo">
-                                <label>Mensaje:</label>
-                                <textarea rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card project-card border-0 h-100">
+                                <img src="img/proyecto-salud.jpg" alt="Caso de estudio Salud" class="card-img-top project-img">
+                                <div class="card-footer text-center py-3 px-2 bg-accent-subtle border-0"><span class="fw-semibold text-primary small">Case study de academicos - Salud</span></div>
                             </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card project-card border-0 h-100">
+                                <img src="img/proyecto-mipyme.jpg" alt="Caso de estudio MIPYME" class="card-img-top project-img">
+                                <div class="card-footer text-center py-3 px-2 bg-accent-subtle border-0"><span class="fw-semibold text-primary small">Case study de academicos - MIPYME</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                            <button type="submit" class="btn-enviar">Enviar</button>
+                <div class="mb-5">
+                    <h3 class="subsection-title text-muted mb-3">4.2 Casos demostrativos</h3>
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card project-card border-0 h-100">
+                                <img src="img/demo-ia.jpg" alt="Caso demostrativo IA" class="card-img-top project-img">
+                                <div class="card-footer text-center py-3 px-2 bg-accent-subtle border-0"><span class="fw-semibold text-primary small">Case study de demostrativo IA</span></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card project-card border-0 h-100">
+                                <img src="img/demo-data.jpg" alt="Caso demostrativo Data" class="card-img-top project-img">
+                                <div class="card-footer text-center py-3 px-2 bg-accent-subtle border-0"><span class="fw-semibold text-primary small">Case study de demostrativo Data</span></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card project-card border-0 h-100">
+                                <img src="img/demo-web.jpg" alt="Caso demostrativo Web" class="card-img-top project-img">
+                                <div class="card-footer text-center py-3 px-2 bg-accent-subtle border-0"><span class="fw-semibold text-primary small">Case study de demostrativo Web</span></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card project-card border-0 h-100">
+                                <img src="img/demo-cloud.jpg" alt="Caso demostrativo Cloud" class="card-img-top project-img">
+                                <div class="card-footer text-center py-3 px-2 bg-accent-subtle border-0"><span class="fw-semibold text-primary small">Case study de demostrativo Cloud</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="subsection-title text-muted mb-3">4.3 Tecnologias y Entorno Operativo</h3>
+                    <div class="row g-1 border rounded-4 overflow-hidden bg-white">
+                        <div class="col-md-4 col-sm-6 tech-cell"><i class="bi bi-cloud text-accent fs-4"></i><div><strong>Cloud Platforms</strong><small class="text-muted d-block">AWS, Azure, Google Cloud</small></div></div>
+                        <div class="col-md-4 col-sm-6 tech-cell"><i class="bi bi-cpu text-accent fs-4"></i><div><strong>Machine Learning</strong><small class="text-muted d-block">TensorFlow, PyTorch, scikit-learn</small></div></div>
+                        <div class="col-md-4 col-sm-6 tech-cell"><i class="bi bi-bar-chart-line text-accent fs-4"></i><div><strong>Data Visualization</strong><small class="text-muted d-block">Power BI, Tableau, D3.js</small></div></div>
+                        <div class="col-md-4 col-sm-6 tech-cell"><i class="bi bi-code-slash text-accent fs-4"></i><div><strong>Web Technologies</strong><small class="text-muted d-block">HTML5, CSS3, Bootstrap</small></div></div>
+                        <div class="col-md-4 col-sm-6 tech-cell"><i class="bi bi-robot text-accent fs-4"></i><div><strong>AI Frameworks</strong><small class="text-muted d-block">LangChain, Hugging Face</small></div></div>
+                        <div class="col-md-4 col-sm-6 tech-cell"><i class="bi bi-database text-accent fs-4"></i><div><strong>Databases</strong><small class="text-muted d-block">PostgreSQL, MongoDB</small></div></div>
+                        <div class="col-md-4 col-sm-6 tech-cell"><i class="bi bi-filetype-py text-accent fs-4"></i><div><strong>Python Ecosystem</strong><small class="text-muted d-block">Pandas, NumPy, FastAPI</small></div></div>
+                        <div class="col-md-4 col-sm-6 tech-cell"><i class="bi bi-lightning text-accent fs-4"></i><div><strong>APIs and Realtime</strong><small class="text-muted d-block">REST, GraphQL, WebSockets</small></div></div>
+                        <div class="col-md-4 col-sm-6 tech-cell"><i class="bi bi-box text-accent fs-4"></i><div><strong>DevOps</strong><small class="text-muted d-block">Docker, Kubernetes</small></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-5">
+            <div class="container">
+                <h2 class="section-title-bar mb-4">5. Contacto</h2>
+                <div class="row g-5">
+
+                    <div class="col-lg-6">
+                        <h3 class="subsection-title mb-3">5.1 Formulario de contacto</h3>
+                        <form class="contact-form">
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold small" for="contact-name">Nombre completo</label>
+                                <input type="text" class="form-control form-control-lg rounded-3" id="contact-name" name="nombre" placeholder="Tu nombre completo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold small" for="contact-email">Correo electronico</label>
+                                <input type="email" class="form-control form-control-lg rounded-3" id="contact-email" name="email" placeholder="correo@ejemplo.com" required>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold small" for="contact-company">Empresa</label>
+                                    <input type="text" class="form-control rounded-3" id="contact-company" name="empresa" placeholder="Nombre de la empresa">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold small" for="contact-phone">Telefono</label>
+                                    <input type="tel" class="form-control rounded-3" id="contact-phone" name="telefono" placeholder="+51 999 888 777">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold small" for="contact-subject">Asunto</label>
+                                <input type="text" class="form-control rounded-3" id="contact-subject" name="asunto" placeholder="Motivo de contacto">
+                            </div>
+                            <div class="form-check mb-3">
+                                <input type="checkbox" class="form-check-input" id="terminos" name="terminos" checked>
+                                <label class="form-check-label small text-muted" for="terminos">Acepto los terminos establecidos</label>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold small" for="contact-message">Mensaje</label>
+                                <textarea class="form-control rounded-3" id="contact-message" name="mensaje" rows="4" placeholder="Escribe tu mensaje aqui..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-accent rounded-pill px-5">Enviar mensaje</button>
                         </form>
                     </div>
 
-                    <div class="columna-info-contacto">
-                        <div class="bloque-redes">
-                            <h3>5.2 Redes sociales</h3>
-                            <ul class="lista-redes">
-                                <li><span class="icon-social">👤</span> @datasociales</li>
-                                <li><span class="icon-social">👤</span> @data_naai</li>
-                                <li><span class="icon-social">👤</span> @datasociales</li>
-                            </ul>
-                        </div>
-
-                        <div class="bloque-ubicacion">
-                            <h3>5.3 Información de correo o ubicación</h3>
-                            <div class="tarjeta-ubicacion">
-                                
-                                <a href="https://maps.google.com/?q=Lima,+Peru" target="_blank" rel="noopener noreferrer" class="enlace-mapa-google" title="Ver en Google Maps">
-                                    <span class="icono-mapa-btn">🗺️</span>
-                                    <span>Ver ubicación</span>
-                                </a>
-
-                                <div class="detalles-direccion">
-                                    <ul>
-                                        <li class="enfasis">Sede Central</li>
-                                        <li class="atenuado">Lima, Perú</li>
-                                        <li class="enfasis">Central Telefónica</li>
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-column h-100 justify-content-between">
+                            <div class="mb-5">
+                                <h3 class="subsection-title mb-3">5.2 Redes sociales</h3>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-linkedin text-accent me-2"></i><a href="#" class="text-decoration-none text-reset">@consultoria_data</a></li>
+                                    <li class="mb-2"><i class="bi bi-twitter-x text-accent me-2"></i><a href="#" class="text-decoration-none text-reset">@data_ia_cibertec</a></li>
+                                    <li><i class="bi bi-github text-accent me-2"></i><a href="#" class="text-decoration-none text-reset">@cibertec-data-ia</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="subsection-title mb-3">5.3 Informacion de correo o ubicacion</h3>
+                                <div class="d-flex gap-4 align-items-start">
+                                    <a href="https://maps.google.com/?q=Lima,+Peru" target="_blank" rel="noopener noreferrer" class="btn btn-primary d-flex flex-column align-items-center justify-content-center rounded-3 text-white text-decoration-none" style="width: 120px; height: 120px; min-width: 120px;">
+                                        <i class="bi bi-geo-alt fs-1 mb-1"></i>
+                                        <span class="small fw-semibold">Ver ubicacion</span>
+                                    </a>
+                                    <ul class="list-unstyled small">
+                                        <li class="fw-bold">Sede Central</li>
+                                        <li class="text-muted mb-2">Lima, Peru</li>
+                                        <li class="fw-bold">Central Telefonica</li>
                                         <li>Anexo Cibertec: 10088</li>
                                         <li>Contacto Directo: 0123</li>
-                                        <li class="fecha-publicacion">Publicación: Mayo, 2026</li>
+                                        <li class="text-muted mt-2" style="font-size: 0.7rem;">Publicacion: Mayo, 2026</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-diagram-3 me-2"></i>Consultoria Data & IA</h5>
+                    <p class="small text-white-50 mb-0">Plataforma Web de Consultoria en Data & Inteligencia Artificial. Instituto de Educacion Superior Privado Cibertec.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <h6 class="fw-bold text-uppercase small mb-3">Navegacion</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-1"><a href="#inicio" class="text-white-50 text-decoration-none">Inicio</a></li>
+                        <li class="mb-1"><a href="#nosotros" class="text-white-50 text-decoration-none">Nosotros</a></li>
+                        <li class="mb-1"><a href="#servicios" class="text-white-50 text-decoration-none">Servicios</a></li>
+                        <li class="mb-1"><a href="#proyectos" class="text-white-50 text-decoration-none">Proyectos</a></li>
+                        <li><a href="#contacto" class="text-white-50 text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <h6 class="fw-bold text-uppercase small mb-3">Contacto</h6>
+                    <ul class="list-unstyled small text-white-50">
+                        <li class="mb-1"><i class="bi bi-geo-alt me-1"></i>Lima, Peru</li>
+                        <li class="mb-1"><i class="bi bi-telephone me-1"></i>Anexo: 10088</li>
+                        <li><i class="bi bi-envelope me-1"></i>contacto@cibertec.edu.pe</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h6 class="fw-bold text-uppercase small mb-3">Siguenos</h6>
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="#" class="text-white-50" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white-50" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white-50" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <p class="text-center text-white-50 small mb-0">&copy; 2026 Consultoria Data & IA - Cibertec. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
